@@ -1,5 +1,7 @@
 # Easynvest Tech Demo
 
+Link na Azure: https://easynvesttechdemo.azurewebsites.net/swagger/index.html
+
 # Estrutura
 
 O projeto está estruturado tendo como base o modelo abaixo:
@@ -26,3 +28,4 @@ Essa camada é utilizada apenas para conter utilitários que podem ser usados em
 - RetryPolicy - Caso alguma das chamadas ao endpoints externos falhem, o HttpClient está configurado para tentar novamente mais duas vezes respeitando um intervalo de 3 segundos entre cada chamada.
 - Cache - O resultado das chamadas ficam cacheados em memória local até o dias seguinta(00:00:00). Em um cenário real, o ideal seria possuir um servidor/cluster dedicado para manter essas informações.
 - Errorhandling Middleware - Caso ocorra alguma exceção na aplicação, existe um middleware responsável por interceptar o erro, realizar alguma tratamento e entregar uma responsa amigável ao chamador. Essa estratégia permite que seja possível realizar um log detalhado do erro e devolver uma mensagem menos poluida ao chamador.
+- Swagger - Para uma melhor navegação dos recursos disponiveis
